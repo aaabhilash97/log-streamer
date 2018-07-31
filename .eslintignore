@@ -1,0 +1,7 @@
+node_modules/**
+bots/**
+scripts/**
+migrations/**
+public/**
+local_file_server/**
+**/v1.0.0.js

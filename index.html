@@ -1,0 +1,21 @@
+<html>
+<script>
+    function connect(username, password, sub) {
+        sub = sub || 'app';
+        let protocol = 'ws';
+        if (location.protocol === 'https:') {
+            protocol = 'wss';
+        }
+        let _url = `${protocol}://${location.host}/stream/logs/ws?password=${password}&username=${username}&sub=${sub}`;
+        let ws = new WebSocket(_url);
+        ws.onmessage = function (event) {
+            console.log(event.data);
+        };
+        ws.onclose = function () {
+            // Try to reconnect in 2 seconds
+            setTimeout(connect, 2000, username, password, sub);
+        };
+    }
+</script>
+
+</html>

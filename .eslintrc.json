@@ -1,0 +1,47 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jquery": true,
+        "mocha": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 8, // or 2017
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-useless-escape": 0,
+        "no-console":0,
+        "require-await": "error",
+        "indent": [
+            "error",
+            4,
+            { "SwitchCase": 1 }
+        ],
+        "linebreak-style": [
+            "off",
+            "unix"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-unused-vars": [
+            "error", { "vars": "all",
+                       "args": "after-used",
+                       "ignoreRestSiblings": false
+                     }
+        ]
+    },
+    "globals": {
+        "describe": true,
+        "before": true,
+        "it": true,
+        "expect": true,
+        "done": true,
+        "CError": true
+    }
+
+}

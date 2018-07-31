@@ -1,0 +1,5 @@
+node_modules
+**/*.log
+ecosystem.config.js
+authenticator.js
+subscriptions.js
