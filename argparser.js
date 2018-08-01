@@ -1,6 +1,7 @@
 const { ArgumentParser } = require('argparse');
+const package_json = require('./package.json');
 var parser = new ArgumentParser({
-    version: '0.0.1',
+    version: package_json.version,
     addHelp: true,
     description: 'Log streamer'
 });
