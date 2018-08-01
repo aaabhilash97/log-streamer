@@ -19,7 +19,7 @@ Log Viewer is a Node.js application for viewing server logs in the browser conso
 Open `http://localhost:3005/stream/logs` in your browser and open `Developer tools`.
 In `Dev tool console` type `connect("user", "pass", "app")`. This will establish the websocket connection. And start to print logs in console.
 
-![Drag Racing](https://preview.ibb.co/fBDfae/Log_streamer.jpg)
+![Log stream Screenshot](https://i.imgur.com/3IbYdb4.jpg)
 
 ## Usage
 
