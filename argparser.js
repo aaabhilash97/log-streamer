@@ -32,5 +32,12 @@ parser.addArgument(
     }
 );
 
+parser.addArgument(
+    ['-f', '--file'],
+    {
+        help: 'file to stream'
+    }
+);
+
 const args = parser.parseArgs();
 module.exports = args;

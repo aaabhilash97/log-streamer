@@ -1,16 +1,20 @@
+const args = require('./argparser.js');
 let SUBSCRIPTIONS;
 try {
     SUBSCRIPTIONS = require('./subscriptions.js');
 } catch (exception) {
-    console.error('Failed to import subscriptions.js', exception);
-    console.log('Subscription format is : ', {
-        'app': {
-            file: '/path/log.log',
-            count: 0
-        }
-    });
-    process.exit(1);
+    console.error('Failed to import subscriptions.js', exception.message);
+    SUBSCRIPTIONS = {};
 }
+
+if (args.file) {
+    SUBSCRIPTIONS["app"] = {
+        file: args.file,
+        count: 0
+    };
+}
+
+
 
 const querystring = require('querystring');
 const { Tail } = require('tail');
@@ -92,7 +96,7 @@ function init({ server, authenticate }) {
             });
             SUBSCRIPTIONS[sub]['count']++;
             SUBSCRIPTIONS[sub]['descriptor'] = tail;
-            console.log(`${S} file sunscribed: `, SUBSCRIPTIONS[sub].file);
+            console.log(`${S} file subscribed: `, SUBSCRIPTIONS[sub].file);
         } catch (exception) {
             console.log(`${S} Some error occured: `, exception);
         }

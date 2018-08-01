@@ -11,7 +11,7 @@ let authenticator;
 try {
     authenticator = require('./authenticator.js');
 } catch (exception) {
-    console.warn('No authenticator found, default authenticator will be using', exception);
+    console.warn('No authenticator found, default authenticator will be using', exception.message);
 }
 
 // Init express.app
