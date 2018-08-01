@@ -16,7 +16,7 @@ Log Viewer is a Node.js application for viewing server logs in the browser conso
     npm start -- -u user -p pass -f /var/log/nginx/access.log -P 3005
 ```
 
-Open `http://localhost:3005` in your browser and open `Developer tools`.
+Open `http://localhost:3005/stream/logs` in your browser and open `Developer tools`.
 In `Dev tool console` type `connect("user", "pass", "app")`. This will establish the websocket connection. And start to print logs in console.
 
 ## Usage
