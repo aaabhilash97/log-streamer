@@ -9,13 +9,15 @@ const parser = new ArgumentParser({
 parser.addArgument(
     ['-u', '--username'],
     {
-        help: 'Username to connect'
+        help: 'Username to connect',
+        required: true
     }
 );
 parser.addArgument(
     ['-p', '--password'],
     {
-        help: 'password to connect'
+        help: 'password to connect',
+        required: true
     }
 );
 
@@ -37,7 +39,8 @@ parser.addArgument(
 parser.addArgument(
     ['-f', '--file'],
     {
-        help: 'file to stream'
+        help: 'file to stream',
+        required: true
     }
 );
 
