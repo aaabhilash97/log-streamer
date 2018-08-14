@@ -24,7 +24,7 @@ In `Dev tool console` type `connect("user", "pass", "app")`. This will establish
 ## Usage
 
 ```usage
-usage: app.js [-h] [-v] [-u USERNAME] [-p PASSWORD] [-P PORT] [-o ORIGIN]
+usage: node app.js [-h] [-v] [-u USERNAME] [-p PASSWORD] [-P PORT] [-o ORIGIN]
               [-f FILE]
 Log streamer
 
