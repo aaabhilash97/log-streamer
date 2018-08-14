@@ -41,4 +41,6 @@ Optional arguments:
   -f FILE, --file FILE  file to stream
 ```
 
-MIT &copy; [LICENCE](https://github.com/aaabhilash97/log-streamer/blob/master/LICENCE)
+## Licence
+
+This software is provided free of charge and without restriction under the MIT License
