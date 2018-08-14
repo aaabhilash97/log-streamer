@@ -40,3 +40,5 @@ Optional arguments:
                         Allowed origin
   -f FILE, --file FILE  file to stream
 ```
+
+MIT &copy; [Abhilash KM](https://github.com/aaabhilash97/log-streamer/blob/master/LICENCE)
